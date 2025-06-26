@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pankkipalvelut - Cipher Wins Casino</title>
+    <meta name="description" content="Cipher Wins pankkipalvelut - Nopeat talletukset ja nostot suomalaisilla maksutavoilla. Turvallinen KYC-prosessi ja välittömät siirrot.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-bg': '#22015b',
+                        'cyber-pink': '#D600CB',
+                        'cyber-purple': '#8B5CF6',
+                        'cyber-blue': '#06B6D4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cyber-bg text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-cyber-bg/90 backdrop-blur-md border-b border-cyber-pink/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/">
+                    <img src="images/logo.png" class="h-16" alt="Cipher Wins kasino logo" />
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Koti</a>
+                    <a href="/banking" class="nav-link">Pankkitoiminta</a>
+                    <a href="/#games" class="nav-link">Pelit</a>
+                    <a href="/#bonuses" class="nav-link">Bonukset</a>
+                    <a href="/#about" class="nav-link">Tietoa</a>
+                    <a href="/#support" class="nav-link">Tuki</a>
+                </div>
+                <button onclick="redirectToCasino()" class="cta-button">
+                    Pelaa Nyt <i class="fas fa-rocket ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="mt-8 pt-24 pb-12 relative overflow-hidden">
+        <div class="absolute inset-0 cyber-gradient"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl lg:text-6xl font-bold cyber-title mb-6">
+                    <span class="text-cyber-pink">PANKKIPALVELUT</span><br>
+                    <span class="text-white">CIPHER WINS</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-8">
+                    Nopeat ja turvalliset maksutavat suomalaisille pelaajille
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <div class="banking-stat">
+                        <div class="text-2xl font-bold text-cyber-pink">30s</div>
+                        <div class="text-sm text-gray-400">Talletus aika</div>
+                    </div>
+                    <div class="banking-stat">
+                        <div class="text-2xl font-bold text-cyber-blue">24h</div>
+                        <div class="text-sm text-gray-400">Nosto aika</div>
+                    </div>
+                    <div class="banking-stat">
+                        <div class="text-2xl font-bold text-cyber-pink">0€</div>
+                        <div class="text-sm text-gray-400">Maksut</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deposit Methods -->
+    <section id="deposit" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 cyber-text-glow">
+                <span class="text-cyber-pink">Talletustavat</span>
+            </h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <!-- Pay N Play -->
+                <div class="payment-method-card mb-8">
+                    <div class="flex items-center mb-6">
+                        <div class="payment-icon bg-cyber-pink">
+                            <i class="fas fa-bolt text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-2xl font-bold text-cyber-pink">Pay N Play</h3>
+                            <p class="text-gray-400">Välitön pelaaminen pankkitunnistautumisella</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-bold mb-4 text-cyber-blue">Tuetut Pankit:</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bank-card">
+                                    <i class="fas fa-university mr-2"></i>Nordea
+                                </div>
+                                <div class="bank-card">
+                                    <i class="fas fa-university mr-2"></i>Osuuspankki
+                                </div>
+                                <div class="bank-card">
+                                    <i class="fas fa-university mr-2"></i>Danske Bank
+                                </div>
+                                <div class="bank-card">
+                                    <i class="fas fa-university mr-2"></i>Handelsbanken
+                                </div>
+                                <div class="bank-card">
+                                    <i class="fas fa-university mr-2"></i>S-Pankki
+                                </div>
+                                <div class="bank-card">
+                                    <i class="fas fa-university mr-2"></i>Säästöpankki
+                                </div>
+                                <div class="bank-card">
+                                    <i class="fas fa-university mr-2"></i>POP Pankki
+                                </div>
+                                <div class="bank-card">
+                                    <i class="fas fa-university mr-2"></i>Oma Säästöpankki
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <table class="w-full payment-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="font-bold text-cyber-pink">Minimi talletus:</td>
+                                        <td>20€</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-bold text-cyber-pink">Maksimi talletus:</td>
+                                        <td>10,000€</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-bold text-cyber-pink">Käsittelyaika:</td>
+                                        <td>Välitön</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-bold text-cyber-pink">Maksut:</td>
+                                        <td>Ei maksuja</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Credit Cards -->
+                <div class="payment-method-card mb-8">
+                    <div class="flex items-center mb-6">
+                        <div class="payment-icon bg-cyber-blue">
+                            <i class="fas fa-credit-card text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-2xl font-bold text-cyber-blue">Luottokortit</h3>
+                            <p class="text-gray-400">Visa, Mastercard</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="card-brand">
+                                    <i class="fab fa-cc-visa text-3xl text-blue-500"></i>
+                                    <span class="ml-2">Visa</span>
+                                </div>
+                                <div class="card-brand">
+                                    <i class="fab fa-cc-mastercard text-3xl text-red-500"></i>
+                                    <span class="ml-2">Mastercard</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <table class="w-full payment-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="font-bold text-cyber-blue">Minimi talletus:</td>
+                                        <td>10€</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-bold text-cyber-blue">Maksimi talletus:</td>
+                                        <td>5,000€</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-bold text-cyber-blue">Käsittelyaika:</td>
+                                        <td>Välitön</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-bold text-cyber-blue">Maksut:</td>
+                                        <td>Ei maksuja</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-Wallets -->
+                <div class="payment-method-card">
+                    <div class="flex items-center mb-6">
+                        <div class="payment-icon bg-cyber-pink">
+                            <i class="fas fa-wallet text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-2xl font-bold text-cyber-pink">Sähköiset Lompakot</h3>
+                            <p class="text-gray-400">Skrill, Neteller, Paysafecard</p>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <div class="space-y-3">
+                                <div class="ewallet-item">
+                                    <i class="fas fa-wallet mr-3 text-cyber-pink"></i>
+                                    <span>Skrill</span>
+                                    <span class="ml-auto text-sm text-gray-400">10€ - 5,000€</span>
+                                </div>
+                                <div class="ewallet-item">
+                                    <i class="fas fa-wallet mr-3 text-cyber-blue"></i>
+                                    <span>Neteller</span>
+                                    <span class="ml-auto text-sm text-gray-400">10€ - 5,000€</span>
+                                </div>
+                                <div class="ewallet-item">
+                                    <i class="fas fa-credit-card mr-3 text-cyber-pink"></i>
+                                    <span>Paysafecard</span>
+                                    <span class="ml-auto text-sm text-gray-400">10€ - 1,000€</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <table class="w-full payment-table">
+                                <tbody>
+                                    <tr>
+                                        <td class="font-bold text-cyber-pink">Käsittelyaika:</td>
+                                        <td>Välitön</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-bold text-cyber-pink">Maksut:</td>
+                                        <td>Ei maksuja</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-bold text-cyber-pink">Turvallisuus:</td>
+                                        <td>SSL-salattu</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Withdrawal Methods -->
+    <section id="withdrawal" class="py-20 bg-gradient-to-b from-transparent to-cyber-bg/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 cyber-text-glow">
+                <span class="text-cyber-pink">Nostotavat</span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="withdrawal-info-card mb-12">
+                    <div class="text-center mb-8">
+                        <i class="fas fa-clock text-4xl text-cyber-pink mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">Nopeat Nostot</h3>
+                        <p class="text-gray-300">
+                            Cipher Wins käsittelee kaikki nostopyynnöt mahdollisimman nopeasti. 
+                            Useimmat nostot käsitellään 24 tunnin sisällä.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="withdrawal-method-card">
+                        <h3 class="text-xl font-bold text-cyber-pink mb-4">
+                            <i class="fas fa-university mr-2"></i>
+                            Pankkisiirto
+                        </h3>
+                        <table class="w-full">
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 font-bold">Minimi nosto:</td>
+                                    <td class="py-2">20€</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Maksimi nosto:</td>
+                                    <td class="py-2">5,000€ / päivä</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Käsittelyaika:</td>
+                                    <td class="py-2">1-3 arkipäivää</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Maksut:</td>
+                                    <td class="py-2">Ei maksuja</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="withdrawal-method-card">
+                        <h3 class="text-xl font-bold text-cyber-blue mb-4">
+                            <i class="fas fa-bolt mr-2"></i>
+                            Trustly (Pay N Play)
+                        </h3>
+                        <table class="w-full">
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 font-bold">Minimi nosto:</td>
+                                    <td class="py-2">20€</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Maksimi nosto:</td>
+                                    <td class="py-2">10,000€ / päivä</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Käsittelyaika:</td>
+                                    <td class="py-2">0-24 tuntia</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Maksut:</td>
+                                    <td class="py-2">Ei maksuja</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="withdrawal-method-card">
+                        <h3 class="text-xl font-bold text-cyber-pink mb-4">
+                            <i class="fas fa-wallet mr-2"></i>
+                            Skrill
+                        </h3>
+                        <table class="w-full">
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 font-bold">Minimi nosto:</td>
+                                    <td class="py-2">10€</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Maksimi nosto:</td>
+                                    <td class="py-2">5,000€ / päivä</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Käsittelyaika:</td>
+                                    <td class="py-2">0-24 tuntia</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Maksut:</td>
+                                    <td class="py-2">Ei maksuja</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="withdrawal-method-card">
+                        <h3 class="text-xl font-bold text-cyber-blue mb-4">
+                            <i class="fas fa-wallet mr-2"></i>
+                            Neteller
+                        </h3>
+                        <table class="w-full">
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 font-bold">Minimi nosto:</td>
+                                    <td class="py-2">10€</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Maksimi nosto:</td>
+                                    <td class="py-2">5,000€ / päivä</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Käsittelyaika:</td>
+                                    <td class="py-2">0-24 tuntia</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 font-bold">Maksut:</td>
+                                    <td class="py-2">Ei maksuja</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KYC Section -->
+    <section id="kyc" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16 cyber-text-glow">
+                    <span class="text-cyber-pink">Tunnistautuminen</span> (KYC)
+                </h2>
+                
+                <div class="kyc-info-card mb-12">
+                    <div class="text-center mb-8">
+                        <i class="fas fa-shield-alt text-4xl text-cyber-pink mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">Miksi Tunnistautuminen on Tärpeen?</h3>
+                        <p class="text-gray-300 mb-6">
+                            Tunnistautuminen (KYC - Know Your Customer) on lakisääteinen prosessi, joka varmistaa 
+                            pelaajien turvallisuuden ja estää rahanpesun. Cipher Wins noudattaa tiukkoja 
+                            turvallisuusstandardeja suojatakseen pelaajien etuja.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="kyc-step-card">
+                        <h3 class="text-xl font-bold text-cyber-pink mb-4">
+                            <i class="fas fa-id-card mr-2"></i>
+                            Vaihe 1: Henkilöllisyys
+                        </h3>
+                        <p class="text-gray-300 mb-4">Lähetä kuva henkilötodistuksestasi:</p>
+                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                            <li>Suomalainen henkilökortti</li>
+                            <li>Passi</li>
+                            <li>Ajokortti</li>
+                        </ul>
+                    </div>
+
+                    <div class="kyc-step-card">
+                        <h3 class="text-xl font-bold text-cyber-blue mb-4">
+                            <i class="fas fa-home mr-2"></i>
+                            Vaihe 2: Osoitetodistus
+                        </h3>
+                        <p class="text-gray-300 mb-4">Lähetä todistus osoitteestasi (max 3kk vanha):</p>
+                        <ul class="list-disc list-inside text-sm text-gray-400 space-y-1">
+                            <li>Sähkölasku</li>
+                            <li>Pankkilausunto</li>
+                            <li>Vuokrasopimus</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="kyc-timeline">
+                    <h3 class="text-xl font-bold text-center mb-8 text-cyber-pink">Tunnistautumisprosessi</h3>
+                    <div class="grid md:grid-cols-4 gap-4">
+                        <div class="timeline-step">
+                            <div class="step-number">1</div>
+                            <h4 class="font-bold">Lähetä Asiakirjat</h4>
+                            <p class="text-sm text-gray-400">Lataa asiakirjat turvallisesti</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number">2</div>
+                            <h4 class="font-bold">Tarkistus</h4>
+                            <p class="text-sm text-gray-400">Asiantuntijamme tarkistavat</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number">3</div>
+                            <h4 class="font-bold">Vahvistus</h4>
+                            <p class="text-sm text-gray-400">Saat vahvistuksen sähköpostiin</p>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number">4</div>
+                            <h4 class="font-bold">Valmis</h4>
+                            <p class="text-sm text-gray-400">Voit nostaa voittosi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gradient-to-b from-transparent to-cyber-bg/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 cyber-text-glow">
+                Usein Kysytyt <span class="text-cyber-pink">Kysymykset</span>
+            </h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Kuinka kauan tunnistautuminen kestää?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tunnistautumisprosessi kestää yleensä 24-72 tuntia. Käsittelemme kaikki asiakirjat mahdollisimman nopeasti arkipäivinä klo 9-17. Viikonloppuisin käsittely voi kestää hieman kauemmin.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Mikä on 3x kierrätysvaatimus?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Rahanpesun estämiseksi kaikki talletukset tulee kierrättää vähintään 3 kertaa ennen nostoa. Esimerkiksi 100€ talletus tulee pelata 300€ edestä. Tämä on lakisääteinen vaatimus, joka koskee kaikkia online-kasinoita.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Kuinka nopeasti nostot käsitellään?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nostot käsitellään seuraavasti: Trustly 0-24h, Skrill/Neteller 0-24h, Pankkisiirto 1-3 arkipäivää. VIP-pelaajat nauttivat nopeammasta käsittelyajasta. Ensimmäinen nosto vaatii aina tunnistautumisen.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Onko maksutavoissa maksuja?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p><a href="/" class="underline hover:no-underline">CipherWins</a> ei peri maksuja talletuksista tai nostoista. Kuitenkin pelaajan oma pankki tai maksuntarjoaja saattaa periä omia maksujaan. Suosittelemme tarkistamaan maksut oman pankin kanssa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Voinko käyttää toisen henkilön maksutapaa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ei, kaikki maksutavat tulee olla pelaajan omissa nimissä. Kolmannen osapuolen maksutapojen käyttö on kielletty ja voi johtaa tilin sulkemiseen. Tämä on turvallisuussyistä ja rahanpesun estämiseksi.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Mitä tapahtuu jos asiakirjani hylätään?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Jos asiakirjasi hylätään, saat sähköpostiin tarkan selityksen syystä ja ohjeet korjaamiseen. Yleisimmät syyt ovat epäselvä kuva, vanhentunut asiakirja tai puuttuva tieto. Voit lähettää uudet asiakirjat heti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Notice -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="security-notice-card">
+                    <div class="text-center">
+                        <i class="fas fa-shield-alt text-4xl text-cyber-pink mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">Turvallisuus Ensin</h3>
+                        <p class="text-gray-300 mb-6">
+                            Cipher Wins käyttää alan parhaita turvallisuusteknologioita suojatakseen pelaajien 
+                            tiedot ja varat. Kaikki maksutapahtumat salataan 256-bittisellä SSL-salauksella.
+                        </p>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="security-feature">
+                                <i class="fas fa-lock text-2xl text-cyber-blue mb-2"></i>
+                                <h4 class="font-bold">SSL-salaus</h4>
+                                <p class="text-sm text-gray-400">256-bit suojaus</p>
+                            </div>
+                            <div class="security-feature">
+                                <i class="fas fa-certificate text-2xl text-cyber-pink mb-2"></i>
+                                <h4 class="font-bold">MGA Lisenssi</h4>
+                                <p class="text-sm text-gray-400">Malta Gaming Authority</p>
+                            </div>
+                            <div class="security-feature">
+                                <i class="fas fa-user-shield text-2xl text-cyber-blue mb-2"></i>
+                                <h4 class="font-bold">Tietosuoja</h4>
+                                <p class="text-sm text-gray-400">GDPR-yhteensopiva</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-cyber-pink/20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="/">
+                    <img src="images/logo.png" class="h-16" alt="Cipher Wins kasino logo" />
+                </a>
+                    <p class="text-gray-400 text-sm text-center mt-4">
+                        Suomen johtava online-kasino synthwave-henkisessä kybermaailmassa.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-cyber-pink">Pankkipalvelut</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#deposit" class="hover:text-white transition-colors">Talletukset</a></li>
+                        <li><a href="#withdrawal" class="hover:text-white transition-colors">Nostot</a></li>
+                        <li><a href="#kyc" class="hover:text-white transition-colors">Tunnistautuminen</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">UKK</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-cyber-pink">Tuki</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Live Chat</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">support@cipherwins.fi</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">+358 9 123 4567</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-cyber-pink">Vastuullinen Pelaaminen</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Pelaamisen hallinta</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Peluuri.fi</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">EHYT ry</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-cyber-pink/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-sm text-gray-400 mb-4 md:mb-0">
+                        <p>© 2025 Cipher Wins. Kaikki oikeudet pidätetään.</p>
+                        <p class="mt-2">
+                            <i class="fas fa-exclamation-triangle text-yellow-400 mr-2"></i>
+                            Pelaaminen voi aiheuttaa riippuvuutta. Pelaa vastuullisesti. 18+
+                        </p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Käyttöehdot</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Tietosuoja</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Redirect function
+        function redirectToCasino() {
+            window.location.href = '/go';
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                answer.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+    </script>
+</body>
+</html>

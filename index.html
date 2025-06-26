@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Wins Casino - Tervetuloa Pelaamaan! 300% Bonus + 1000 Ilmaiskierrosta</title>
+    <meta name="description" content="Cipher Wins tarjoaa parhaat kasinopelit Suomessa! Saa 300% tervetuliaisbonuksen jopa 10,000€ asti + 1000 ilmaiskierrosta. Pelaa nyt turvallisesti!">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Cipher Wins Casino - 300% Bonus + 1000 Ilmaiskierrosta">
+    <meta property="og:description" content="Suomen paras online-kasino! Tervetuliaispaketti 300% jopa 10,000€ + 1000 FS. Pelaa turvallisesti!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cipherwins.fi">
+    <meta property="og:image" content="https://cipherwins.fi/images/hero.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-bg': '#22015b',
+                        'cyber-pink': '#D600CB',
+                        'cyber-purple': '#8B5CF6',
+                        'cyber-blue': '#06B6D4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cyber-bg text-white overflow-x-hidden">
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-emoji">🎰</div>
+        <div class="floating-emoji">🎲</div>
+        <div class="floating-emoji">🃏</div>
+        <div class="floating-emoji">💎</div>
+        <div class="floating-emoji">🔫</div>
+        <div class="floating-emoji">💰</div>
+        <div class="floating-emoji">🎯</div>
+        <div class="floating-emoji">⚡</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-cyber-bg/90 backdrop-blur-md border-b border-cyber-pink/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/">
+                    <img src="images/logo.png" class="h-16" alt="Cipher Wins kasino logo" />
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Koti</a>
+                    <a href="/banking" class="nav-link">Pankkitoiminta</a>
+                    <a href="#games" class="nav-link">Pelit</a>
+                    <a href="#bonuses" class="nav-link">Bonukset</a>
+                    <a href="#about" class="nav-link">Tietoa</a>
+                    <a href="#support" class="nav-link">Tuki</a>
+                </div>
+                <button onclick="redirectToCasino()" class="cta-button">
+                    Pelaa Nyt <i class="fas fa-rocket ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="mt-6 min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 cyber-gradient"></div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h1 class="text-5xl lg:text-7xl font-bold cyber-title">
+                        <span class="text-cyber-pink">CIPHER WINS</span><br>
+                        <span class="!text-white text-3xl lg:text-4xl">KASINO SEIKKAILU</span>
+                    </h1>
+                    
+                    <!-- Bonus Box -->
+                    <div class="bonus-box p-6 rounded-2xl border-2 border-cyber-pink glow-box">
+                        <div class="text-center">
+                            <div class="text-cyber-pink text-xl font-bold mb-2">🎁 TERVETULIAISPAKETTI</div>
+                            <div class="text-4xl font-bold text-white mb-2">300% BONUS</div>
+                            <div class="text-2xl text-cyber-blue">jopa 10,000€ asti</div>
+                            <div class="text-cyber-pink text-lg mt-2">+ 1000 ILMAISKIERROSTA</div>
+                            <div class="text-sm text-gray-300 mt-2">🍭 Ilmaiskierrokset Sugar Rush pelissä</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="redirectToCasino()" class="cta-button-large">
+                            <i class="fas fa-play mr-2"></i>
+                            ALOITA PELAAMINEN
+                        </button>
+                        <button onclick="redirectToCasino()" class="cta-button-secondary">
+                            <i class="fas fa-gift mr-2"></i>
+                            LUNASTA BONUS
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="hero-image-container">
+                        <img src="images/hero.png" alt="Cipher Wins Casino" class="w-full h-auto rounded-2xl shadow-2xl glow-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Claim Bonus -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 cyber-text-glow">
+                Kuinka Lunastaa Bonus? <span class="text-cyber-pink">4 Helppoa Askelta</span>
+            </h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="step-card text-center">
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus text-4xl text-cyber-pink"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4 mb-2">1. Rekisteröidy</h3>
+                    <p class="text-gray-300">Luo tili muutamassa sekunnissa</p>
+                </div>
+                <div class="step-card text-center">
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card text-4xl text-cyber-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4 mb-2">2. Talleta</h3>
+                    <p class="text-gray-300">Tee ensimmäinen talletuksesi</p>
+                </div>
+                <div class="step-card text-center">
+                    <div class="step-icon">
+                        <i class="fas fa-gift text-4xl text-cyber-pink"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4 mb-2">3. Saa Bonus</h3>
+                    <p class="text-gray-300">Bonus aktivoituu automaattisesti</p>
+                </div>
+                <div class="step-card text-center">
+                    <div class="step-icon">
+                        <i class="fas fa-gamepad text-4xl text-cyber-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-4 mb-2">4. Pelaa</h3>
+                    <p class="text-gray-300">Nauti peleistä ja voitoista!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section id="games" class="py-20 bg-gradient-to-b from-transparent to-cyber-bg/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 cyber-text-glow">
+                <span class="text-cyber-pink">Suosituimmat</span> Pelit
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                <div class="game-card">
+                    <img src="images/12-zodiacs" alt="12 zodiacs" class="w-full h-auto rounded-lg">
+                    <div class="game-overlay">
+                        <h3 class="font-bold">12 zodiacs</h3>
+                        <button onclick="redirectToCasino()" class="mt-2 px-4 py-2 bg-cyber-pink rounded-lg hover:bg-cyber-pink/80 transition-all">
+                            Pelaa
+                        </button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="images/5lucky-lions.jpg" alt="5 Lucky Lions" class="w-full h-auto rounded-lg">
+                    <div class="game-overlay">
+                        <h3 class="font-bold">5 Lucky Lions</h3>
+                        <button onclick="redirectToCasino()" class="mt-2 px-4 py-2 bg-cyber-pink rounded-lg hover:bg-cyber-pink/80 transition-all">
+                            Pelaa
+                        </button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="images/aztec-ancients.jpg" alt="Aztec Ancients" class="w-full h-auto rounded-lg">
+                    <div class="game-overlay">
+                        <h3 class="font-bold">Aztec Ancients</h3>
+                        <button onclick="redirectToCasino()" class="mt-2 px-4 py-2 bg-cyber-pink rounded-lg hover:bg-cyber-pink/80 transition-all">
+                            Pelaa
+                        </button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="images/furtune-god.png" alt="Fortune God" class="w-full h-auto rounded-lg">
+                    <div class="game-overlay">
+                        <h3 class="font-bold">Fortune God</h3>
+                        <button onclick="redirectToCasino()" class="mt-2 px-4 py-2 bg-cyber-pink rounded-lg hover:bg-cyber-pink/80 transition-all">
+                            Pelaa
+                        </button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="images/book-hotfire.png" alt="Book Hotfire" class="w-full h-auto rounded-lg">
+                    <div class="game-overlay">
+                        <h3 class="font-bold">Book Hotfire</h3>
+                        <button onclick="redirectToCasino()" class="mt-2 px-4 py-2 bg-cyber-pink rounded-lg hover:bg-cyber-pink/80 transition-all">
+                            Pelaa
+                        </button>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="images/amazon-riches.jpg" alt="Amazon Riches" class="w-full h-auto rounded-lg">
+                    <div class="game-overlay">
+                        <h3 class="font-bold">Amazon Riches</h3>
+                        <button onclick="redirectToCasino()" class="mt-2 px-4 py-2 bg-cyber-pink rounded-lg hover:bg-cyber-pink/80 transition-all">
+                            Pelaa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-16 cyber-text-glow">
+                    Tietoa <span class="text-cyber-pink">Cipher Wins</span> Kasinosta
+                </h2>
+                <div class="prose prose-lg text-gray-300 space-y-6">
+                    <p>Cipher Wins on Suomen johtava online-kasino, joka tarjoaa pelaajille ainutlaatuisen pelielämyksen synthwave-henkisessä kybermaailmassa. Kasino on perustettu tarjoamaan suomalaisille pelaajille turvallinen ja jännittävä ympäristö nauttia maailman parhaista kasinopeleistä.</p>
+                    
+                    <p>Cipher Wins erottuu kilpailijoistaan innovatiivisen pelivalikoimansa ja ainutlaatuisen visuaalisen ilmeensä ansiosta. Kasino yhdistää futuristisen cyberpunk-estetiikan perinteisiin kasinopeleihin, luoden pelaajille unohtumattoman kokemuksen joka kerta kun he kirjautuvat sisään.</p>
+                    
+                    <p>Pelivalikoima sisältää yli 3000 peliä maailman arvostetuimmilta pelintarjoajilta. Slottipelit ovat kasinon vahvuus, mutta tarjolla on myös kattava valikoima pöytäpelejä, live-kasinoa ja erikoispelejä. Jokainen peli on optimoitu toimimaan saumattomasti sekä tietokoneella että mobiililaitteilla.</p>
+                    
+                    <p>Turvallisuus on Cipher Winsille ensisijaisen tärkeää. Kasino toimii Maltan peliviranomaisen lisenssillä ja käyttää alan parhaita salausteknologioita pelaajien tietojen ja varojen suojaamiseksi. Kaikki maksutapahtumat käsitellään turvallisten SSL-yhteyksien kautta.</p>
+                    
+                    <p>Asiakaspalvelu on saatavilla 24/7 suomeksi, ja pelaajat voivat ottaa yhteyttä live-chatin, sähköpostin tai puhelimen kautta. Cipher Wins sitoutuu vastuulliseen pelaamiseen ja tarjoaa pelaajille työkaluja pelaamisen hallintaan.</p>
+                    
+                    <p>Bonusjärjestelmä on suunniteltu palkitsemaan sekä uusia että uskollisia pelaajia. Tervetuliaispaketin lisäksi kasino tarjoaa viikoittaisia kampanjoita, cashback-tarjouksia ja VIP-ohjelman, joka palkitsee aktiivisimmat pelaajat eksklusiivisilla eduilla ja henkilökohtaisella palvelulla.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Providers -->
+    <section class="py-20 bg-gradient-to-b from-transparent to-cyber-bg/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 cyber-text-glow">
+                <span class="text-cyber-pink">Pelintarjoajat</span>
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="provider-card">NetEnt</div>
+                <div class="provider-card">Microgaming</div>
+                <div class="provider-card">Play'n GO</div>
+                <div class="provider-card">Pragmatic Play</div>
+                <div class="provider-card">Evolution Gaming</div>
+                <div class="provider-card">Yggdrasil</div>
+                <div class="provider-card">Big Time Gaming</div>
+                <div class="provider-card">Red Tiger</div>
+                <div class="provider-card">Quickspin</div>
+                <div class="provider-card">Thunderkick</div>
+                <div class="provider-card">Push Gaming</div>
+                <div class="provider-card">Nolimit City</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Methods -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 cyber-text-glow">
+                <span class="text-cyber-pink">Maksutavat</span>
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="payment-table">
+                        <h3 class="text-xl font-bold mb-4 text-cyber-pink">Talletukset</h3>
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-cyber-pink/30">
+                                    <th class="text-left py-2">Maksutapa</th>
+                                    <th class="text-left py-2">Min/Max</th>
+                                    <th class="text-left py-2">Aika</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2">Visa/Mastercard</td>
+                                    <td class="py-2">10€ / 5,000€</td>
+                                    <td class="py-2">Välitön</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2">Trustly</td>
+                                    <td class="py-2">20€ / 10,000€</td>
+                                    <td class="py-2">Välitön</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2">Paysafecard</td>
+                                    <td class="py-2">10€ / 1,000€</td>
+                                    <td class="py-2">Välitön</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2">Skrill</td>
+                                    <td class="py-2">10€ / 5,000€</td>
+                                    <td class="py-2">Välitön</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="payment-table">
+                        <h3 class="text-xl font-bold mb-4 text-cyber-pink">Nostot</h3>
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-cyber-pink/30">
+                                    <th class="text-left py-2">Maksutapa</th>
+                                    <th class="text-left py-2">Min/Max</th>
+                                    <th class="text-left py-2">Aika</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2">Pankkisiirto</td>
+                                    <td class="py-2">20€ / 5,000€</td>
+                                    <td class="py-2">1-3 päivää</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2">Trustly</td>
+                                    <td class="py-2">20€ / 10,000€</td>
+                                    <td class="py-2">0-24h</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2">Skrill</td>
+                                    <td class="py-2">10€ / 5,000€</td>
+                                    <td class="py-2">0-24h</td>
+                                </tr>
+                                <tr class="border-b border-gray-700">
+                                    <td class="py-2">Neteller</td>
+                                    <td class="py-2">10€ / 5,000€</td>
+                                    <td class="py-2">0-24h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="text-gray-300 space-y-4">
+                    <p>Cipher Wins tarjoaa suomalaisille pelaajille kattavan valikoiman turvallisia ja luotettavia maksutapoja. Kaikki maksutapahtumat suojataan 256-bittisellä SSL-salauksella, ja kasino noudattaa tiukkoja tietosuojastandardeja.</p>
+                    <p>Trustly on erityisen suosittu suomalaisten keskuudessa, sillä se mahdollistaa nopeat ja turvalliset pankkisiirrot suoraan verkkopankin kautta. Nostot käsitellään yleensä 24 tunnin sisällä, ja VIP-pelaajat nauttivat nopeammasta käsittelyajasta.</p>
+                    <p>Kaikki maksutavat tukevat euroja, eikä valuutanvaihtomaksuja peritä. Kasino ei peri maksuja talletuksista tai nostoista, mutta pelaajan oma pankki tai maksuntarjoaja saattaa periä omia maksujaan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & VIP -->
+    <section class="py-20 bg-gradient-to-b from-transparent to-cyber-bg/50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 cyber-text-glow">
+                    <span class="text-cyber-pink">Turvallisuus</span> & VIP-Ohjelma
+                </h2>
+                
+                <div class="grid md:grid-cols-4 gap-6 mb-12">
+                    <div class="vip-level">
+                        <div class="text-center">
+                            <i class="fas fa-star text-3xl text-gray-400 mb-4"></i>
+                            <h3 class="font-bold text-gray-400">Bronze</h3>
+                            <p class="text-sm mt-2">Aloittelija</p>
+                        </div>
+                    </div>
+                    <div class="vip-level">
+                        <div class="text-center">
+                            <i class="fas fa-star text-3xl text-gray-300 mb-4"></i>
+                            <h3 class="font-bold text-gray-300">Silver</h3>
+                            <p class="text-sm mt-2">5% Cashback</p>
+                        </div>
+                    </div>
+                    <div class="vip-level">
+                        <div class="text-center">
+                            <i class="fas fa-star text-3xl text-yellow-400 mb-4"></i>
+                            <h3 class="font-bold text-yellow-400">Gold</h3>
+                            <p class="text-sm mt-2">10% Cashback</p>
+                        </div>
+                    </div>
+                    <div class="vip-level">
+                        <div class="text-center">
+                            <i class="fas fa-crown text-3xl text-cyber-pink mb-4"></i>
+                            <h3 class="font-bold text-cyber-pink">Diamond</h3>
+                            <p class="text-sm mt-2">15% Cashback</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-gray-300 space-y-4">
+                    <p>Cipher Wins VIP-ohjelma palkitsee uskollisia pelaajia eksklusiivisilla eduilla ja henkilökohtaisella palvelulla. Ohjelma koostuu neljästä tasosta: Bronze, Silver, Gold ja Diamond. Pelaajat etenevät tasoissa pelaamisen määrän mukaan.</p>
+                    <p>VIP-jäsenet nauttivat nopeammista nostoista, korkeammista nostorajoista, henkilökohtaisesta VIP-managerista ja eksklusiivisista bonuksista. Diamond-tason jäsenet saavat kutsuja erikoistapahtumiin ja turnauksia varten.</p>
+                    <p>Turvallisuuden osalta Cipher Wins käyttää alan parhaita teknologioita. Kaikki henkilötiedot ja maksutiedot salataan 256-bittisellä SSL-salauksella. Kasino on lisensoitu Maltan peliviranomaiselta (MGA), joka takaa tiukat turvallisuus- ja oikeudenmukaisuusstandardit.</p>
+                    <p>Pelit testataan säännöllisesti riippumattomien tahojen toimesta oikeudenmukaisuuden varmistamiseksi. Cipher Wins sitoutuu vastuulliseen pelaamiseen ja tarjoaa työkaluja pelaamisen hallintaan, kuten talletusrajat, tappiorajat ja itsesulkumahdollisuuden.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses Review -->
+    <section id="bonuses" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 cyber-text-glow">
+                    <span class="text-cyber-pink">Bonukset</span> & Kampanjat
+                </h2>
+                
+                <div class="space-y-8">
+                    <div class="bonus-review-card">
+                        <h3 class="text-2xl font-bold text-cyber-pink mb-4">Tervetuliaispaketti</h3>
+                        <p class="text-gray-300 mb-4">Cipher Wins tarjoaa markkinoiden parhaita tervetuliaisbonuksia uusille pelaajille. Paketti sisältää kolme ensimmäistä talletusta:</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                            <li>1. talletus: 100% bonus jopa 3,000€ asti + 300 ilmaiskierrosta</li>
+                            <li>2. talletus: 100% bonus jopa 3,500€ asti + 350 ilmaiskierrosta</li>
+                            <li>3. talletus: 100% bonus jopa 3,500€ asti + 350 ilmaiskierrosta</li>
+                        </ul>
+                        <table class="w-full border border-cyber-pink/30 rounded-lg overflow-hidden">
+                            <thead class="bg-cyber-pink/20">
+                                <tr>
+                                    <th class="text-left p-3">Bonus</th>
+                                    <th class="text-left p-3">Kierrätys</th>
+                                    <th class="text-left p-3">Voimassa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-cyber-pink/20">
+                                    <td class="p-3">300% jopa 10,000€</td>
+                                    <td class="p-3">35x (bonus + talletus)</td>
+                                    <td class="p-3">30 päivää</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3">1000 ilmaiskierrosta</td>
+                                    <td class="p-3">35x voitot</td>
+                                    <td class="p-3">7 päivää</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bonus-review-card">
+                        <h3 class="text-2xl font-bold text-cyber-pink mb-4">Viikoittaiset Kampanjat</h3>
+                        <p class="text-gray-300 mb-4">Cipher Wins pitää pelaajat tyytyväisinä jatkuvilla kampanjoilla:</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li><strong>Maanantai Reload:</strong> 50% bonus jopa 500€ asti</li>
+                            <li><strong>Keskiviikon Ilmaiskierrokset:</strong> 100 ilmaiskierrosta viikon pelissä</li>
+                            <li><strong>Perjantai Cashback:</strong> 20% cashback tappioista</li>
+                            <li><strong>Viikonlopun Turnaus:</strong> 10,000€ palkintopotti</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-6">
+                        <h4 class="text-lg font-bold text-red-400 mb-2">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>
+                            Kierrätysvaatimukset
+                        </h4>
+                        <p class="text-sm text-gray-300">
+                            Kaikki bonukset sisältävät kierrätysvaatimuksen. Tervetuliaisbonuksen kierrätysvaatimus on 35x (bonus + talletus). 
+                            Ilmaiskierrosten voittojen kierrätysvaatimus on 35x. Bonusehdot voivat muuttua, ja pelaajien tulee lukea täydelliset ehdot ennen bonuksen lunastamista.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Support -->
+    <section id="support" class="py-20 bg-gradient-to-b from-transparent to-cyber-bg/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 cyber-text-glow">
+                <span class="text-cyber-pink">Asiakaspalvelu</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="support-card text-center">
+                    <i class="fas fa-comments text-4xl text-cyber-pink mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Live Chat</h3>
+                    <p class="text-gray-300 mb-4">24/7 suomenkielinen tuki</p>
+                    <button onclick="redirectToCasino()" class="cta-button-small">Aloita Chat</button>
+                </div>
+                <div class="support-card text-center">
+                    <i class="fas fa-envelope text-4xl text-cyber-blue mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Sähköposti</h3>
+                    <p class="text-gray-300 mb-4">support@cipherwins.fi</p>
+                    <p class="text-sm text-gray-400">Vastaus 2-4 tunnissa</p>
+                </div>
+                <div class="support-card text-center">
+                    <i class="fas fa-phone text-4xl text-cyber-pink mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Puhelin</h3>
+                    <p class="text-gray-300 mb-4">+358 9 123 4567</p>
+                    <p class="text-sm text-gray-400">Ma-Su 10:00-22:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Promotions -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 cyber-text-glow">
+                Muut <span class="text-cyber-pink">Kampanjat</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="promo-card">
+                    <div class="text-center p-6">
+                        <i class="fas fa-trophy text-4xl text-cyber-pink mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Kuukausiturnaus</h3>
+                        <p class="text-gray-300 mb-4">Kilpaile muita pelaajia vastaan 50,000€ palkintopotista</p>
+                        <button onclick="redirectToCasino()" class="cta-button-small">Osallistu</button>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="text-center p-6">
+                        <i class="fas fa-users text-4xl text-cyber-blue mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Ystävien Kutsuminen</h3>
+                        <p class="text-gray-300 mb-4">Saa 100€ bonus jokaisesta kutsumastasi ystävästä</p>
+                        <button onclick="redirectToCasino()" class="cta-button-small">Kutsu Ystävä</button>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="text-center p-6">
+                        <i class="fas fa-birthday-cake text-4xl text-cyber-pink mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Syntymäpäiväbonus</h3>
+                        <p class="text-gray-300 mb-4">Juhli syntymäpäivääsi 200% bonuksella ja ilmaiskierroksilla</p>
+                        <button onclick="redirectToCasino()" class="cta-button-small">Lunasta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Features -->
+    <section class="py-20 bg-gradient-to-b from-transparent to-cyber-bg/50">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 cyber-text-glow">
+                        <span class="text-cyber-pink">Pay N Play</span> Erikoisominaisuus
+                    </h2>
+                    <div>
+                        <img src="images/paynplay.png" alt="Paynplay kasino image" />
+                        </div>
+                    <p class="text-gray-300 mb-6">
+                        Cipher Winsin Pay N Play -ominaisuus mahdollistaa välittömän pelaamisen ilman rekisteröitymistä! 
+                        Tunnistaudu suoraan verkkopankkisi kautta ja aloita pelaaminen 30 sekunnissa. Ei salasanoja, 
+                        ei pitkiä lomakkeita - vain nopea pankkitunnistautuminen ja pelaaminen alkaa heti!
+                    </p>
+                    <button onclick="redirectToCasino()" class="cta-button">
+                        <i class="fas fa-play mr-2"></i>
+                        Kokeile Nyt
+                    </button>
+                </div>
+                <div class="relative">
+                    <div class="pay-n-play-visual bg-gradient-to-br from-cyber-pink/20 to-cyber-blue/20 rounded-2xl p-8 border border-cyber-pink/30 glow-image">
+                        <div class="text-center">
+                            <div class="text-6xl mb-4">🚀</div>
+                            <h3 class="text-2xl font-bold text-cyber-pink mb-4">Pelaa Välittömästi</h3>
+                            <div class="grid grid-cols-3 gap-4 mb-6">
+                                <div class="step-visual">
+                                    <div class="w-12 h-12 bg-cyber-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                                        <span class="font-bold">1</span>
+                                    </div>
+                                    <p class="text-sm">Valitse summa</p>
+                                </div>
+                                <div class="step-visual">
+                                    <div class="w-12 h-12 bg-cyber-blue rounded-full flex items-center justify-center mx-auto mb-2">
+                                        <span class="font-bold">2</span>
+                                    </div>
+                                    <p class="text-sm">Tunnistaudu</p>
+                                </div>
+                                <div class="step-visual">
+                                    <div class="w-12 h-12 bg-cyber-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                                        <span class="font-bold">3</span>
+                                    </div>
+                                    <p class="text-sm">Pelaa heti</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center space-x-4 text-sm">
+                                <span class="px-3 py-1 bg-cyber-pink/20 rounded-full">Nordea</span>
+                                <span class="px-3 py-1 bg-cyber-blue/20 rounded-full">OP</span>
+                                <span class="px-3 py-1 bg-cyber-pink/20 rounded-full">Danske</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 cyber-text-glow">
+                <span class="text-cyber-pink">Luotettavuus</span> & Lisenssit
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt text-4xl text-cyber-pink mb-4"></i>
+                    <h3 class="font-bold">Curacao Lisenssi</h3>
+                    <p class="text-sm text-gray-400">Curacao Gaming Commission</p>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-lock text-4xl text-cyber-blue mb-4"></i>
+                    <h3 class="font-bold">SSL Salaus</h3>
+                    <p class="text-sm text-gray-400">256-bit suojaus</p>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-check-circle text-4xl text-green-400 mb-4"></i>
+                    <h3 class="font-bold">Testatut Pelit</h3>
+                    <p class="text-sm text-gray-400">RNG sertifiointi</p>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-user-shield text-4xl text-cyber-pink mb-4"></i>
+                    <h3 class="font-bold">Vastuullinen Pelaaminen</h3>
+                    <p class="text-sm text-gray-400">Pelaajan suoja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-gradient-to-b from-transparent to-cyber-bg/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 cyber-text-glow">
+                Usein Kysytyt <span class="text-cyber-pink">Kysymykset</span>
+            </h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Kuinka nopeasti voin nostaa voittoni?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nostot käsitellään yleensä 24 tunnin sisällä. Trustly-nostot ovat nopeimpia ja voivat olla tilillä jo muutamassa tunnissa. VIP-pelaajat nauttivat nopeammasta käsittelyajasta.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Onko Cipher Wins turvallinen?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kyllä, Cipher Wins on täysin turvallinen. Kasino toimii Maltan peliviranomaisen lisenssillä ja käyttää 256-bittistä SSL-salausta. Kaikki pelit on testattu oikeudenmukaisuuden varmistamiseksi.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Voinko pelata mobiililaitteella?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kyllä! Cipher Wins on täysin optimoitu mobiililaitteille. Voit pelata kaikkia pelejä suoraan selaimessa ilman erillistä sovellusta. Sivusto toimii saumattomasti kaikilla laitteilla.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3 class="text-lg font-bold">Mitä kierrätysvaatimus tarkoittaa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kierrätysvaatimus tarkoittaa, että sinun täytyy pelata bonussumma tietyn määrän verran ennen kuin voit nostaa voittoja. Esimerkiksi 35x kierrätysvaatimus tarkoittaa, että 100€ bonus täytyy pelata 3500€ edestä.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-cyber-pink/20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="/">
+                    <img src="images/logo.png" class="h-16" alt="Cipher Wins kasino logo" />
+                </a>
+                    <p class="text-gray-400 text-sm text-center mt-4">
+                        Suomen johtava online-kasino synthwave-henkisessä kybermaailmassa.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-cyber-pink">Pelit</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Slotit</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pöytäpelit</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Live Casino</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Jackpotit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-cyber-pink">Tuki</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Asiakaspalvelu</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">UKK</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Maksutavat</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Yhteystiedot</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-cyber-pink">Vastuullinen Pelaaminen</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Pelaamisen hallinta</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Itsesulku</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Peluuri.fi</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Ehkäisevä päihdetyö EHYT</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-cyber-pink/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-sm text-gray-400 mb-4 md:mb-0">
+                        <p>© 2025 Cipher Wins. Kaikki oikeudet pidätetään.</p>
+                        <p class="mt-2">
+                            <i class="fas fa-exclamation-triangle text-yellow-400 mr-2"></i>
+                            Pelaaminen voi aiheuttaa riippuvuutta. Pelaa vastuullisesti. 18+
+                        </p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Käyttöehdot</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Tietosuoja</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Evästeet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Redirect function
+        function redirectToCasino() {
+            window.location.href = '/go';
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                answer.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+
+        // Parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.cyber-gradient');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
