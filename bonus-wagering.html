@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonuksen Kierrätysvaatimus – CipherWins</title>
+    <meta name="description" content="Cipher Wins bonuksen kierrätysvaatimus – Lue kaikki bonuksen kierrätyksestä ja käytä laskuria!">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-bg': '#22015b',
+                        'cyber-pink': '#D600CB',
+                        'cyber-purple': '#8B5CF6',
+                        'cyber-blue': '#06B6D4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .calculator-container { max-width: 480px; margin: 0 auto; background: #181828cc; border-radius: 1rem; padding: 2rem; box-shadow: 0 4px 32px #0002; }
+        .calculator-container label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        .calculator-container input, .calculator-container select { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 0.5rem; border: 1px solid #333; background: #22223b; color: #fff; }
+        .calculator-result { background: #23234a; color: #fff; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem; font-size: 1.1rem; }
+        .star { color: #00b67a; font-size: 1.2em; }
+    </style>
+</head>
+<body class="bg-cyber-bg text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-cyber-bg/90 backdrop-blur-md border-b border-cyber-pink/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/">
+                    <img src="images/logo.png" class="h-16" alt="Cipher Wins kasino logo" />
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="/" class="nav-link">Koti</a>
+                    <a href="/banking" class="nav-link">Pankkitoiminta</a>
+                    <a href="/#games" class="nav-link">Pelit</a>
+                    <a href="/#bonuses" class="nav-link">Bonukset</a>
+                    <a href="/#about" class="nav-link">Tietoa</a>
+                    <a href="/#support" class="nav-link">Tuki</a>
+                </div>
+                <button onclick="redirectToCasino()" class="cta-button">
+                    Pelaa Nyt <i class="fas fa-rocket ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="pt-24"></div>
+    <section class="py-20 bg-gradient-to-b from-cyber-bg/80 to-cyber-bg/40">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4 cyber-text-glow">Bonuksen Kierrätysvaatimus</h1>
+            <p class="text-lg mb-8">Laske helposti, kuinka paljon sinun tulee pelata kierrättääksesi bonuksesi ja kotiuttaaksesi voitot nopeasti!</p>
+            <div class="calculator-container">
+                <label for="bonusAmount">Bonuksen määrä (€):</label>
+                <input type="number" id="bonusAmount" value="100" min="1" max="10000">
+                <label for="wagerMultiplier">Kierrätysvaatimus (esim. 35x):</label>
+                <input type="number" id="wagerMultiplier" value="35" min="1" max="100">
+                <label for="depositAmount">Talletuksen määrä (€):</label>
+                <input type="number" id="depositAmount" value="100" min="1" max="10000">
+                <button onclick="calculateWagering()" style="background:#00b67a;color:#fff;padding:0.75rem 2rem;border:none;border-radius:0.5rem;font-weight:bold;">Laske</button>
+                <div class="calculator-result" id="wageringResult">Syötä tiedot ja paina Laske.</div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function calculateWagering() {
+            const bonus = parseFloat(document.getElementById('bonusAmount').value) || 0;
+            const deposit = parseFloat(document.getElementById('depositAmount').value) || 0;
+            const wager = parseFloat(document.getElementById('wagerMultiplier').value) || 0;
+            const total = bonus + deposit;
+            const totalWager = bonus * wager;
+            let html = `<b>Bonuksen määrä:</b> €${bonus.toLocaleString()}<br>`;
+            html += `<b>Talletuksen määrä:</b> €${deposit.toLocaleString()}<br>`;
+            html += `<b>Kierrätysvaatimus:</b> ${wager}x bonussumma<br>`;
+            html += `<b>Kierrätettävä yhteensä:</b> <span style='color:#00b67a;font-size:1.2em;'>€${totalWager.toLocaleString()}</span><br>`;
+            html += `<small>(Vain bonussumma kierrätetään, ellei toisin mainita. Tarkista kasinon ehdot.)</small>`;
+            document.getElementById('wageringResult').innerHTML = html;
+        }
+    </script>
+    <section class="py-16 bg-cyber-bg/60">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-2xl font-bold mb-4">Esimerkki: 300% Bonus 10 000€ asti</h2>
+            <p class="mb-4"><a class="underline hover:no-underline" href="/">CipherWins</a> tarjoaa jopa <b>300% bonuksen 10 000€ asti</b> uusille pelaajille. Tämä tarkoittaa, että jos talletat 100€, saat 300€ bonusta ja pelaat yhteensä 400€:lla!</p>
+            <ul class="list-disc ml-6 mb-6">
+                <li>Bonuksen kierrätysvaatimus on <b>35x bonussumma</b>.</li>
+                <li>Kierrätys koskee vain bonussummaa, ei talletusta.</li>
+                <li>Kaikki pelit eivät välttämättä täytä kierrätysvaatimusta 100% (esim. pöytäpelit voivat täyttää vain 10%).</li>
+                <li>Bonuksen kierrätys tulee suorittaa tietyn ajan kuluessa (esim. 7-30 päivää).</li>
+            </ul>
+            <h3 class="text-xl font-bold mb-2">Miten kierrätys toimii?</h3>
+            <p class="mb-4">Kun saat bonuksen, sinun tulee pelata bonussumma läpi kasinon peleissä kierrätysvaatimuksen verran. Esimerkiksi 100€ bonus x 35 = 3 500€ panostettava summa.</p>
+            <h3 class="text-xl font-bold mb-2">Mitä jos en kierrätä bonusta?</h3>
+            <p class="mb-4">Jos et täytä kierrätysvaatimusta määräajassa, <b>bonus ja sillä saadut voitot mitätöidään</b>. Siksi on tärkeää seurata kierrätyksen etenemistä ja pelata aktiivisesti.</p>
+            <h3 class="text-xl font-bold mb-2">Miksi kierrätys on tärkeää nopeille kotiutuksille?</h3>
+            <p>Vain kierrätetyt bonukset ja niillä saadut voitot voidaan kotiuttaa. Jos kierrätys on kesken, kotiutuspyyntöä ei hyväksytä. Suorita kierrätys mahdollisimman nopeasti, jotta saat voitot tilillesi ilman viivytyksiä!</p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-20 border-t border-cyber-pink/20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="/">
+                    <img src="images/logo.png" class="h-16" alt="Cipher Wins kasino logo" />
+                    </a>
+                </div>
+                <div class="md:col-span-3 flex flex-col md:flex-row md:justify-between md:items-center">
+                    <div class="text-sm text-gray-400 mb-4 md:mb-0">
+                        <p>© 2025 Cipher Wins. Kaikki oikeudet pidätetään.</p>
+                        <p class="mt-2">
+                            <i class="fas fa-exclamation-triangle text-yellow-400 mr-2"></i>
+                            Pelaaminen voi aiheuttaa riippuvuutta. Pelaa vastuullisesti. 18+
+                        </p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Käyttöehdot</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Tietosuoja</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+        // Redirect function
+        function redirectToCasino() {
+            window.location.href = '/pelaa-nyt';
+        }
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                answer.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+    </script>
+</body>
+</html>
